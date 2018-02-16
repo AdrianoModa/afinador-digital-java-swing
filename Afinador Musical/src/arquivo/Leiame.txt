@@ -1,0 +1,12 @@
+Desenvolvido por Adriano Moda Feitosa
+
+Programado em Linguagem Java 8 em 07/01/2016
+
+Programa: Afinador Digital v1.0
+
+Descrição: Programa para afinador violão de 6 cordas.
+
+Todos os direitos reservados.
+
+Contato:
+Email: adrianomodafeitosa@gmail.com
