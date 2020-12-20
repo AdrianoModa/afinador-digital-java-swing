@@ -88,12 +88,12 @@ public class AfinadorMusical extends JFrame {
 			e.printStackTrace();
 		}
 
-		notaMusical[0] = "Mi_1";
-		notaMusical[1] = "Si_2";
-		notaMusical[2] = "Sol_3";
-		notaMusical[3] = "Re_4";
-		notaMusical[4] = "La_5";
-		notaMusical[5] = "Mi_6";
+		notaMusical[0] = "e4";
+		notaMusical[1] = "b3";
+		notaMusical[2] = "g3";
+		notaMusical[3] = "d3";
+		notaMusical[4] = "a2";
+		notaMusical[5] = "e2";
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(150, 150, 228, 449);
