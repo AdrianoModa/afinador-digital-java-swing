@@ -54,6 +54,7 @@ public class AfinadorMusical extends JFrame {
 	private String[] notaMusical = new String[6];
 	private JMenuItem abrirVolume;
 	private JMenuItem menuItemSair;
+	private static final String IMAGE_ICON_NAME = "/imagens/play_black.png";
 
 	public static void main(String[] args){
 		EventQueue.invokeLater(new Runnable(){
@@ -162,7 +163,7 @@ public class AfinadorMusical extends JFrame {
 		campoNotaMusical.setColumns(30);
 
 		btnE6 = new JButton("Mi - 6ª Corda");
-		btnE6.setIcon(new ImageIcon(AfinadorMusical.class.getResource("/imagens/play_black.png")));
+		btnE6.setIcon(new ImageIcon(AfinadorMusical.class.getResource(IMAGE_ICON_NAME)));
 		btnE6.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0){
 				seletor = 5;
@@ -187,7 +188,7 @@ public class AfinadorMusical extends JFrame {
 		contentPane.add(btnE6);
 
 		btnA5 = new JButton("La - 5ª Corda");
-		btnA5.setIcon(new ImageIcon(AfinadorMusical.class.getResource("/imagens/play_black.png")));
+		btnA5.setIcon(new ImageIcon(AfinadorMusical.class.getResource(IMAGE_ICON_NAME)));
 		btnA5.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0){
 				seletor = 4;
@@ -213,7 +214,7 @@ public class AfinadorMusical extends JFrame {
 		contentPane.add(btnA5);
 
 		btnD4 = new JButton("Re - 4ª Corda");
-		btnD4.setIcon(new ImageIcon(AfinadorMusical.class.getResource("/imagens/play_black.png")));
+		btnD4.setIcon(new ImageIcon(AfinadorMusical.class.getResource(IMAGE_ICON_NAME)));
 		btnD4.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0){
 				seletor = 3;
@@ -239,7 +240,7 @@ public class AfinadorMusical extends JFrame {
 		contentPane.add(btnD4);
 
 		btnG3 = new JButton("Sol - 3ª Corda");
-		btnG3.setIcon(new ImageIcon(AfinadorMusical.class.getResource("/imagens/play_black.png")));
+		btnG3.setIcon(new ImageIcon(AfinadorMusical.class.getResource(IMAGE_ICON_NAME)));
 		btnG3.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0){
 				seletor = 2;
@@ -265,7 +266,7 @@ public class AfinadorMusical extends JFrame {
 		contentPane.add(btnG3);
 
 		btnB2 = new JButton("Si - 2ª Corda");
-		btnB2.setIcon(new ImageIcon(AfinadorMusical.class.getResource("/imagens/play_black.png")));
+		btnB2.setIcon(new ImageIcon(AfinadorMusical.class.getResource(IMAGE_ICON_NAME)));
 		btnB2.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0){
 				seletor = 1;
@@ -291,7 +292,7 @@ public class AfinadorMusical extends JFrame {
 		contentPane.add(btnB2);
 
 		btnE1 = new JButton("mi - 1ª Corda");
-		btnE1.setIcon(new ImageIcon(AfinadorMusical.class.getResource("/imagens/play_black.png")));
+		btnE1.setIcon(new ImageIcon(AfinadorMusical.class.getResource(IMAGE_ICON_NAME)));
 		btnE1.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0){
 				seletor = 0;
