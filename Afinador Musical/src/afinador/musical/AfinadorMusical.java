@@ -27,6 +27,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
+import static afinador.musical.constantes.NotasMusicaisConstantes.*;
+
 public class AfinadorMusical extends JFrame {
 
 	/**
@@ -51,10 +53,11 @@ public class AfinadorMusical extends JFrame {
 	private JTextField campoNotaMusical;
 	private Player afinar;
 	private int seletor = 0;
-	private String[] notaMusical = new String[6];
+	private String notaMusical[] = {"e4", "b3", "g3", "d3", "a2", "e2"};
 	private JMenuItem abrirVolume;
 	private JMenuItem menuItemSair;
 	private static final String IMAGE_ICON_NAME = "/imagens/play_black.png";
+	private static final String IMAGE_STOP_NAME = "/imagens/stop.png";
 
 	public static void main(String[] args){
 		EventQueue.invokeLater(new Runnable(){
@@ -87,14 +90,7 @@ public class AfinadorMusical extends JFrame {
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-
-		notaMusical[0] = "e4";
-		notaMusical[1] = "b3";
-		notaMusical[2] = "g3";
-		notaMusical[3] = "d3";
-		notaMusical[4] = "a2";
-		notaMusical[5] = "e2";
+		}			
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(150, 150, 228, 449);
@@ -170,14 +166,14 @@ public class AfinadorMusical extends JFrame {
 				Musica mi_6 = new Musica();	
 				if(afinar == null){
 					botaoParar();					
-					campoNotaMusical.setText("(E) Mi - Frequência 82,407 Hz");
+					campoNotaMusical.setText(MI_6);
 					mi_6.start();
 					btnE6.setVisible(false);
 					btnPararSomE6.setVisible(true);					
 				}else{
 					botaoParar();
 					afinar.close();
-					campoNotaMusical.setText("(E) Mi – Frequência 82,407 Hz");
+					campoNotaMusical.setText(MI_6);
 					mi_6.start();
 					btnE6.setVisible(false);
 					btnPararSomE6.setVisible(true);					
@@ -194,7 +190,7 @@ public class AfinadorMusical extends JFrame {
 				seletor = 4;
 				if(afinar == null){
 					botaoParar();
-					campoNotaMusical.setText("(A) Lá – Frequência 110,000 Hz");
+					campoNotaMusical.setText(LA_5);
 					Musica la_5 = new Musica();
 					la_5.start();
 					btnA5.setVisible(false);
@@ -202,7 +198,7 @@ public class AfinadorMusical extends JFrame {
 				}else{
 					botaoParar();
 					afinar.close();
-					campoNotaMusical.setText("(A) Lá – Frequência 110,000 Hz");
+					campoNotaMusical.setText(LA_5);
 					Musica la_5 = new Musica();
 					la_5.start();
 					btnA5.setVisible(false);
@@ -220,7 +216,7 @@ public class AfinadorMusical extends JFrame {
 				seletor = 3;
 				if(afinar == null){
 					botaoParar();
-					campoNotaMusical.setText("(D) Ré – Frequência 146,832 Hz");
+					campoNotaMusical.setText(RE_4);
 					Musica re_4 = new Musica();
 					re_4.start();
 					btnD4.setVisible(false);
@@ -228,7 +224,7 @@ public class AfinadorMusical extends JFrame {
 				}else{
 					botaoParar();
 					afinar.close();
-					campoNotaMusical.setText("(D) Ré – Frequência 146,832 Hz");
+					campoNotaMusical.setText(RE_4);
 					Musica re_4 = new Musica();
 					re_4.start();
 					btnD4.setVisible(false);
@@ -246,7 +242,7 @@ public class AfinadorMusical extends JFrame {
 				seletor = 2;
 				if(afinar == null){
 					botaoParar();
-					campoNotaMusical.setText("(G) Sol – Frequência 195,998 Hz");
+					campoNotaMusical.setText(SOL_3);
 					Musica sol_3 = new Musica();
 					sol_3.start();
 					btnG3.setVisible(false);
@@ -254,7 +250,7 @@ public class AfinadorMusical extends JFrame {
 				}else{
 					botaoParar();
 					afinar.close();
-					campoNotaMusical.setText("(G) Sol – Frequência 195,998 Hz");					
+					campoNotaMusical.setText(SOL_3);					
 					Musica sol_3 = new Musica();
 					sol_3.start();
 					btnG3.setVisible(false);
@@ -272,7 +268,7 @@ public class AfinadorMusical extends JFrame {
 				seletor = 1;
 				if(afinar == null){
 					botaoParar();
-					campoNotaMusical.setText("(B) Si – Frequência 246,942 Hz");
+					campoNotaMusical.setText(SI_2);
 					Musica si_2 = new Musica();
 					si_2.start();
 					btnB2.setVisible(false);
@@ -280,7 +276,7 @@ public class AfinadorMusical extends JFrame {
 				}else{
 					botaoParar();
 					afinar.close();
-					campoNotaMusical.setText("(B) Si – Frequência 246,942 Hz");					
+					campoNotaMusical.setText(SI_2);					
 					Musica si_2 = new Musica();
 					si_2.start();
 					btnB2.setVisible(false);
@@ -298,14 +294,14 @@ public class AfinadorMusical extends JFrame {
 				seletor = 0;
 				botaoParar();
 				if(afinar == null){
-					campoNotaMusical.setText("(e) Mi – Frequência 329,628 Hz");
+					campoNotaMusical.setText(MI_1);
 					Musica mi_1 = new Musica();
 					mi_1.start();
 					btnE1.setVisible(false);
 					btnPararSomE1.setVisible(true);
 				}else{
 					afinar.close();
-					campoNotaMusical.setText("(e) Mi – Frequência 329,628 Hz");
+					campoNotaMusical.setText(MI_1);
 					Musica mi_1 = new Musica();
 					mi_1.start();
 					btnE1.setVisible(false);
@@ -329,7 +325,7 @@ public class AfinadorMusical extends JFrame {
 				btnPararSomE6.setVisible(false);
 			}
 		});
-		btnPararSomE6.setIcon(new ImageIcon(AfinadorMusical.class.getResource("/imagens/stop.png")));
+		btnPararSomE6.setIcon(new ImageIcon(AfinadorMusical.class.getResource(IMAGE_STOP_NAME)));
 		btnPararSomE6.setBounds(10,112,196,33);
 		contentPane.add(btnPararSomE6);
 		// corda 5
@@ -342,7 +338,7 @@ public class AfinadorMusical extends JFrame {
 				btnPararSomA5.setVisible(false);
 			}
 		});
-		btnPararSomA5.setIcon(new ImageIcon(AfinadorMusical.class.getResource("/imagens/stop.png")));
+		btnPararSomA5.setIcon(new ImageIcon(AfinadorMusical.class.getResource(IMAGE_STOP_NAME)));
 		btnPararSomA5.setBounds(10,152,196,33);
 		contentPane.add(btnPararSomA5);
 		// corda 4
@@ -355,7 +351,7 @@ public class AfinadorMusical extends JFrame {
 				btnPararSomD4.setVisible(false);
 			}
 		});
-		btnPararSomD4.setIcon(new ImageIcon(AfinadorMusical.class.getResource("/imagens/stop.png")));
+		btnPararSomD4.setIcon(new ImageIcon(AfinadorMusical.class.getResource(IMAGE_STOP_NAME)));
 		btnPararSomD4.setBounds(10,192,196,33);
 		contentPane.add(btnPararSomD4);
 		// corda 3
@@ -368,7 +364,7 @@ public class AfinadorMusical extends JFrame {
 				btnPararSomG3.setVisible(false);
 			}
 		});
-		btnPararSomG3.setIcon(new ImageIcon(AfinadorMusical.class.getResource("/imagens/stop.png")));
+		btnPararSomG3.setIcon(new ImageIcon(AfinadorMusical.class.getResource(IMAGE_STOP_NAME)));
 		btnPararSomG3.setBounds(10,232,196,33);
 		contentPane.add(btnPararSomG3);
 		// corda 2
@@ -381,7 +377,7 @@ public class AfinadorMusical extends JFrame {
 				btnPararSomB2.setVisible(false);
 			}
 		});
-		btnPararSomB2.setIcon(new ImageIcon(AfinadorMusical.class.getResource("/imagens/stop.png")));
+		btnPararSomB2.setIcon(new ImageIcon(AfinadorMusical.class.getResource(IMAGE_STOP_NAME)));
 		btnPararSomB2.setBounds(10,272,196,33);
 		contentPane.add(btnPararSomB2);
 		// corda 1
@@ -394,7 +390,7 @@ public class AfinadorMusical extends JFrame {
 				btnPararSomE1.setVisible(false);
 			}
 		});
-		btnPararSomE1.setIcon(new ImageIcon(AfinadorMusical.class.getResource("/imagens/stop.png")));
+		btnPararSomE1.setIcon(new ImageIcon(AfinadorMusical.class.getResource(IMAGE_STOP_NAME)));
 		btnPararSomE1.setBounds(10,312,196,33);
 		contentPane.add(btnPararSomE1);
 
